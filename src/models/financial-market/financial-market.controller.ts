@@ -8,23 +8,10 @@ import { ApiTags } from '@nestjs/swagger';
 export class FinancialMarketController {
   constructor(private readonly financialMarketService: FinancialMarketService) {}
 
-
-
-  @Get("symbol")
-  getSymbol() {
-    return this.financialMarketService.getSymbol()
-  }
-
   @Get("all")
   getAll() {
     return this.financialMarketService.getAll()
   }
-
-  @Get("yahoo-finance")
-  getYahooFinance() {
-    return this.financialMarketService.getYahooFinance()
-  }
-
 
 
   // @Get("quote")

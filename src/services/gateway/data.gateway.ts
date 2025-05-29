@@ -6,7 +6,7 @@ import { Server } from 'socket.io';
 
 @WebSocketGateway({
   cors: {
-    origin: 'http://localhost:3000',
+    origin: ['http://localhost:3000','https://vietnet-frontent.vercel.app'],
     credentials: true,
   },
 })
