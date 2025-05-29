@@ -1,4 +1,4 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, HttpCode } from '@nestjs/common';
 import { FinancialMarketService } from './financial-market.service';
 import { ApiTags } from '@nestjs/swagger';
 
@@ -11,6 +11,15 @@ export class FinancialMarketController {
   @Get("all")
   getAll() {
     return this.financialMarketService.getAll()
+  }
+
+
+  @Get("health")
+  @HttpCode(200)
+  getHealth() {
+    return {
+      message : "Good"
+    }
   }
 
 
